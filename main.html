@@ -26,15 +26,14 @@
     <div class="container">
         <div>
             <div id="money">
-                <span id="moneyCount">0</span>
+                <span value="0" id="moneyCount">0</span>
             </div>
             <div id="upgrade">
 
             </div>
         </div>
         <div id="pet">
-            <img src="./asset/rimuru-pixelart.gif" alt="">
-            <button onclick="addMoney()"></button>
+            <img src="./asset/rimuru-pixelart.gif" onclick="addMoney()" alt="">
         </div>
         <div id="clicker">
 
@@ -42,6 +41,7 @@
     </div>
 
     <script src="main.js"></script>
+    <script>$("#levelplayer").attr("level", localStorage.getItem("level"));</script>
 </body>
 
 </html>
