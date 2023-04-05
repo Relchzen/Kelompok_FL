@@ -1,9 +1,12 @@
-var money = document.getElementById("moneyCount");
-var multi = 1;
-money=0;
+function addMoney() {
+    var moneyCount = document.getElementById("moneyCount");
+    var money = Number(moneyCount.getAttribute("money"));
+}
 
-function addMoney(money) {
-    money += 1*multi;
-
-    money.innerHTML = money;
+function auto() {
+    i = 0;
+    while(i != 1){
+        addMoney();
+        sleep(1);
+    }
 }

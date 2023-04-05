@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio>
     <title>Main Game</title>
 </head>
@@ -24,36 +25,50 @@
         </ul>
     </nav>
     <div class="container">
-        <div id="judul">
-            <h1>Idle Clicker Game (Tahu Bulat)</h1>
-        </div>
-        <div id="buy">
-            <div>
-                <div id="money">
-                <span id="moneyCount">0</span>
+        <div>
+            <div id="money">
+                <span id="moneyCount"></span>
             </div>
-            <!-- <div id="upgrade">
-
-            </div> -->
-            </div>
-            <div id="autoCLicker">
-                <p>Auto Clickers: </p>
-                <p>Cost: 10</p>
-                <button>Buy Auto-Clickers</button>
-            </div>
-            <div id="multiplier">
-                <p>Buka Cabang Tahu Bulat: 1</p>
-                <p>Cost: 50</p>
-                <button>Buy Multiplier</button>
+            <div id="upgrade">
+                <div id="up">
+                    <img src="./asset/shoot.webp" alt="">
+                    <p>upgrade power</p>
+                    <button><span>10 C</span></button>
+                </div>
+                <div id="up">
+                    <img src="./asset/shoot.webp" alt="">
+                    <p>upgrade power</p>
+                    <button><span>10 C</span></button>
+                </div>
+                <div id="up">
+                    <img src="./asset/shoot.webp" alt="">
+                    <p>upgrade power</p>
+                    <button><span>10 C</span></button>
+                </div>
+                <div id="up">
+                    <img src="./asset/shoot.webp" alt="">
+                    <p>upgrade power</p>
+                    <button><span>10 C</span></button>
+                </div>
             </div>
         </div>
         <div id="pet">
-            <img src="./asset/rimuru-pixelart.gif" alt="">
-            <button onclick="addMoney()"></button>
+            <img src="./asset/rimuru-pixelart.gif" onclick="auto()" alt="">
         </div>
         <div id="clicker">
-
+            <div>
+                <button id="autoClick" onclick="auto()">Autoclick</button>
+            </div>
+            <div>
+                <button id="multi">Multiplier</button>
+            </div>
         </div>
+<<<<<<< HEAD
+=======
+    <div class="content">
+        <div id="money"></div>
+        <div id="upgrade"></div>
+>>>>>>> 302ead885c87260c3071b03c6995f566bd9f8196
     </div>
 
     <script src="main.js"></script>
