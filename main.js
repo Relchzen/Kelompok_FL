@@ -1,9 +1,7 @@
-var money = document.getElementById("moneyCount");
-var multi = 1;
-money=0;
 
-function addMoney(money) {
-    money += 1*multi;
+function addMoney() {
+    var moneyCount = document.getElementById("moneyCount");
 
-    money.innerHTML = money;
+    moneyCount.value += 1;
+    moneyCount.innerHTML = moneyCount.value;
 }
