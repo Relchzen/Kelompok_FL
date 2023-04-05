@@ -21,7 +21,7 @@ label.logo {
     color: white;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    margin-left: 50px;
     font-weight: bold;
 }
 
@@ -65,14 +65,18 @@ a.active, a:hover{
 
 
 #container{
-    margin: 20px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 20px;
+    margin-bottom: 50px;
 
 }
 
 #about{
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 80px;
+    margin-left: 30px;
+    margin-right: 20px;
     margin-top: 20px;
     font-size: 30px;
     
@@ -80,35 +84,37 @@ a.active, a:hover{
 
 
 #profil{
-    margin-left: 80px;
-    margin-right: 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    width: auto;
+    margin-left: 30px;
+    margin-right: 20px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
 #data{
-    margin-top: 20px;
-    height: 400px;
-    width: 250px;
+    height: 360px;
+    width: 200px;
     background-color: gainsboro;
-    margin: 20px;
-    margin-left: 0;
+    margin-right: 30px;
 }
 
 img{
-    width: 250px;
-    height: 250px;
+
+    width: 200px;
+    height: 200px;
 }
 
 h4{
     margin: 10px;
-    font-size: 14px;
+    font-size: 11px;
 }
 p{
    margin-left: 10px;
    margin-top: none; 
-   font-size: 12px;
+   font-size: 11px;
 }
 
 
@@ -117,15 +123,73 @@ p{
 
 
 @media(max-width:952px){
-    label.logo{
+    label.logo {
+        color: white;
         font-size: 30px;
-        padding-left: 50px;
+        line-height: 80px;
+        margin-left: 50px;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    #about{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+        margin-top: 20px;
+        font-size: 25px;
+        
+    }
+    
+    
+    #profil{
+        margin-left: 30px;
+        margin-right: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+
+    #data{
+        height: 360px;
+        width: 200px;
+        background-color: gainsboro;
+        margin-right: 30px;
+        margin-bottom: 20px;
     }
     nav ul li a{
         font-size: 16px;
     }
+
+   
 }
 @media(max-width:700px){
+    
+    #profil{
+        margin-left: 30px;
+        margin-right: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    
+    }
+    #about{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+        margin-top: 20px;
+        font-size: 25px;
+        
+    }
+
+    #data{
+        height: 360px;
+        width: 200px;
+        background-color: gainsboro;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width:480px){
     .checkbtn{
         display: block;
     }
@@ -154,36 +218,40 @@ p{
     #check:checked ~ ul{
         left: 0;
     }
-    #profil{
-        margin-left: 80px;
-        margin-right: 80px;
-        display: grid;
-        grid-template-columns: auto;
-    
-    }
-    h4{
-        text-align: center;
-    }
-    
-    img{
-        border-radius: 50%;
-        margin-top: 10px;
-        margin-left: 110px;
-        width: 80px;
-        height: 80px;
-    }
-    
-    #data{
+
+    #container{
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 20px;
-        height: 300px;
-        width: 300px;
-        border: 4px solid black ;
+        margin-bottom: 50px;
+    
+    }
+
+    #profil{
+        margin-left: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    
     }
     
     #about{
-        margin-left: 80px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 30px;
         margin-top: 20px;
         font-size: 30px;
-        font-weight: bold;
+    }
+
+    #data{
+        height: 360px;
+        width: 200px;
+        background-color: gainsboro;
+        margin-bottom: 20px;
+        margin-right: 0;
     }
 }
