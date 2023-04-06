@@ -214,3 +214,12 @@ button:hover{
   width: 80px;
   margin-left: 20px;
 }
+
+.autoclicker button{
+  margin-right: 10px;
+  width: 100px;
+}
+.multiplier button{
+  margin-left: 10px;
+  width: 100px;
+}

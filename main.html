@@ -34,10 +34,10 @@
         <div id="clicker">
             <div class="upgrade">
                 <div class="autoclicker">
-                    <button>Auto click</button>
+                    <button>Auto click <span id="0"></span> : 0</button>
                 </div>
                 <div class="multiplier">
-                    <button>Multiply x</button>
+                    <button>Multiply x<span id="multi">1</span></button>
                 </div>
             </div>
         </div>
@@ -57,20 +57,19 @@
             <p id="shoptext">SHOP</p>
             <div>
                 <div id="upgrades">
-                    <p>Upgrade</p>
-                    <button>10 C</button>
+                    <p>Upgrade Autoclick</p>
+                    <p>buy autoclick = NOOB</p>
+                    <button><span id="autobuy">500</span></button>
                 </div>
                 <div id="upgrades">
-                    <p>Upgrade</p>
-                    <button>10 C</button>
+                    <p>Upgrade Multiplier</p>
+                    <p>upgrade the multplier = EZ mode</p>
+                    <button><span id="multibuy">200</span></button>
                 </div>
                 <div id="upgrades">
-                    <p>Upgrade</p>
-                    <button>10 C</button>
-                </div>
-                <div id="upgrades">
-                    <p>restart</p>
-                    <button onclick="restart()">restart</button>
+                    <p>Upgrade Pet</p>
+                    <p>give your pet a treat so they wont get bored</p>
+                    <button><span id="petbuy">1000</span></button>
                 </div>
             </div>
         </div>
@@ -78,11 +77,10 @@
 
     <script src="main.js"></script>
     <script>
-        document.getElementById("moneyCount").setAttribute("money", localStorage.getItem("money"));
+        var moneyCount = document.getElementById("moneyCount");
+        moneyCount.setAttribute("money", localStorage.getItem("money"));
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
-
-        
     </script>
 </body>
 
