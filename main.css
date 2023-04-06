@@ -29,7 +29,7 @@ header {
   margin: 100px auto 0 auto;
   display: grid;
   background-image: url(./asset/pixelBG4.gif);
-  background-repeat:repeat-y;
+  background-repeat: repeat-y;
   background-size: 100%;
   height: 650px;
 }
@@ -182,21 +182,21 @@ header {
   }
 }
 
-#duitid{
+#duitid {
   text-align: center;
   font-size: 40px;
 }
 
-button{
+button {
   border-radius: 10px;
   background-color: rgba(240, 248, 255, 0.496);
 }
-button:hover{
+button:hover {
   border-radius: 10px;
   background-color: rgb(240, 248, 255);
 }
 
-#upgrades{
+#upgrades {
   border: solid rgba(0, 0, 0, 0);
   border-radius: 10px;
   margin-top: 10px;
@@ -208,26 +208,13 @@ button:hover{
   text-align: center;
 }
 
-#shoptext{
+#shoptext {
   font-size: 70px;
   margin-top: -10px;
   margin-bottom: -20px;
 }
 
-.logo img{
+.logo img {
   width: 80px;
   margin-left: 20px;
-}
-
-.autoclicker button{
-  margin-right: 10px;
-  width: 100px;
-}
-.multiplier button{
-  margin-left: 10px;
-  width: 100px;
-}
-#titletext{
-  margin-right: auto;
-  color: white;
 }

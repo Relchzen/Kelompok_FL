@@ -28,16 +28,14 @@
             </ul>
         </nav>
     </header>
-        
-
     <div class="container">
         <div id="clicker">
             <div class="upgrade">
                 <div class="autoclicker">
-                    <button>Auto click <span id="0"></span> : 0</button>
+                    <button>Add</button>
                 </div>
                 <div class="multiplier">
-                    <button>Multiply x<span id="multi">1</span></button>
+                    <button>Multiply</button>
                 </div>
             </div>
         </div>
@@ -45,7 +43,7 @@
             <span id="moneyCount">0</span>
         </div>
         <div id="characterpet">
-            <img onclick="addMoney()" src="asset/rimuru-pixelart.gif" alt="">
+            <img src="asset/rimuru-pixelart.gif" alt="">
         </div>
     </div>
     <div class="market">
@@ -77,7 +75,8 @@
 
     <script src="main.js"></script>
     <script>
-        document.getElementById("moneyCount").setAttribute("money", localStorage.getItem("money"));
+        var moneyCount = document.getElementById("moneyCount");
+        moneyCount.setAttribute("money", localStorage.getItem("money"));
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
     </script>

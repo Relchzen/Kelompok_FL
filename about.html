@@ -6,24 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio>
+    <script src="https://kit.fontawesome.com/71ca66d8b8.js" crossorigin="anonymous"></script>
+    <!-- <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio> -->
     <title>About Us</title>
 </head>
 
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">Pat Your Pet</label>
-        <ul>
-            <li><a href="main.html">Main Game</a></li>
-            <li><a class="active">About Us</a></li>
-        </ul>
-    </nav>
-    <div id="container">
+    <header>
+        <a href="main.html" class="logo"><img src="./asset/fixNobg.png" alt=""></a>
+        <button class="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><i class="fa-solid fa-bars fa-xl" style="color: #f2f2f2;"></i></button>
+        <nav>
+            <ul id="navbar" data-visible="false">
+                <li>
+                    <a href="main.html">Play</a>
+                </li>
+                <li class="active">
+                    <a href="about.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
         <div id="about">
             <label>About Us</label>
         </div>

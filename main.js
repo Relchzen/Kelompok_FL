@@ -30,23 +30,23 @@ shopToggle.addEventListener("click", () => {
     }
 })
 
-money = 0;
+
 function addMoney() {
-    var moneyCount = document.getElementById("moneyCount");
     var money = Number(moneyCount.getAttribute("money"));
     localStorage.removeItem(money);
     
-    money += 1;
+    money = money + 1;
+    console.log(money);
     moneyCount.setAttribute("money", money);
     localStorage.setItem("money", money);
     document.getElementById("moneyCount").innerHTML = money;
 
 }
 
-function auto() {
-    i = 0;
-    while(i != 1){
-        addMoney();
-        // sleep(1);
-    }
+function upgradeClicker() {
+    
+}
+
+function upgradeMultiplier() {
+    
 }
