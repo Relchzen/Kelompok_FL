@@ -51,3 +51,7 @@ function addMoney() {
 function upgradeClicker() {
     
 }
+
+function upgradeMultiplier() {
+    
+}
