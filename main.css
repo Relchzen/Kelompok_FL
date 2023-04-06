@@ -19,7 +19,7 @@ body {
 
 nav {
   background: #0082e6;
-  height: 80px;
+  height: 60px;
   width: 100%;
 }
 
@@ -124,13 +124,18 @@ a:hover {
   margin-right: 20px;
   margin-bottom: 20px;
   height: 650px;
-  /* display: flex;
-    justify-content: space-around; */
+  
   backdrop-filter: blur(4px);
   border: 3px solid black;
   border-radius: 12px;
 }
-
+#grid{
+  display: grid;
+  grid-template-areas:
+       'x y y y w'
+       'x y y y w'
+       'x y y y w';
+}
 #judul {
   width: 100%;
   display: flex;
