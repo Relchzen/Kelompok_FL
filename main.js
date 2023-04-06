@@ -53,10 +53,10 @@ function auto() {
 
 function upgradepet(){
     var petup = document.getElementById("petbuy");
-    petup = 100;
+    petup = 1000;
     if (money >= petup){
-        moneyadd += 5;
-        money -= 100;
+        moneyadd += 1;
+        money -= 1000;
     }else{
         window.alert("mana duitnya")
     }
