@@ -30,15 +30,10 @@ shopToggle.addEventListener("click", () => {
     }
 })
 
-const moneyCount = document.getElementById("moneyCount");
-const clicker = document.getElementById("clicker");
-const multiplier = document.getElementById("multiplier");
-
-const clickerCount = clicker.getAttribute("clicker");
-const multiplierCount = multiplier.getAttribute("multiplier");
 
 function addMoney() {
     var money = Number(moneyCount.getAttribute("money"));
+    localStorage.removeItem(money);
     
     money = money + 1;
     console.log(money);
