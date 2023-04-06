@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
-  background-image: url("./asset/pixelBG.gif");
+  /* background-image: url("./asset/pixelBG.gif"); */
+  background-color: darkcyan;
   background-size: cover;
 }
 
@@ -22,6 +23,65 @@ nav {
   backdrop-filter: blur(1rem);
 }
 
+.container {
+  margin-top: 100px;
+  display: grid;
+  background-color: cadetblue;
+}
+
+.shop-toggle {
+  z-index: 9000;
+  position: fixed;
+  width: 3rem;
+  aspect-ratio: 1;
+  background: none;
+}
+
+#shop {
+  --gap: 2em;
+  position: fixed;
+  z-index: 1000;
+  inset: 0 70% 0 0;
+  background-color: chartreuse;
+  flex-direction: column;
+  padding: min(30vh, 10rem) 2em;
+  transform: translateX(-100%);
+  transition: transform 350ms ease-out;
+}
+
+#shop[data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.upgrade {
+  width: 400px;
+  background-color: crimson;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+#characterpet {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #shop {
+    inset: 0 40% 0 0;
+  }
+}
+
+#pet {
+  background-color: maroon;
+}
+
+#clicker {
+  background-color: blueviolet;
+  display: flex;
+}
+
 @supports (backdrop-filter: blur(1rem)) {
   #navbar {
     background: hsl(0, 0%, 100%, 0.1);
@@ -36,7 +96,7 @@ nav {
 
   #navbar {
     --gap: clamp(1.5rem, 5vw, 3rem);
-    padding-block: 2rem;
+    padding-block: 1rem;
     padding-inline: clamp(3rem, 10vw, 10rem);
   }
 }
@@ -54,8 +114,8 @@ nav {
   margin: 15px;
 }
 
-#navbar a:hover,
-#navbar a.active {
+#navbar li:hover,
+#navbar li.active {
   background-color: brown;
 }
 
