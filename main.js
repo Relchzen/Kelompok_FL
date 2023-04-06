@@ -30,13 +30,19 @@ shopToggle.addEventListener("click", () => {
     }
 })
 
+const moneyCount = document.getElementById("moneyCount");
+const clicker = document.getElementById("clicker");
+const multiplier = document.getElementById("multiplier");
+
+const clickerCount = clicker.getAttribute("clicker");
+const multiplierCount = multiplier.getAttribute("multiplier");
+
 money = 0;
 var moneyadd = 1;
 
 function addMoney() {
     var moneyCount = document.getElementById("moneyCount");
     var money = Number(moneyCount.getAttribute("money"));
-    localStorage.removeItem(money);
     
     money += moneyadd;
     moneyCount.setAttribute("money", money);
@@ -44,6 +50,13 @@ function addMoney() {
     document.getElementById("moneyCount").innerHTML = money;
 }
 
+function upgradeClicker() {
+    
+}
+
+function upgradeMultiplier() {
+    
+}
 function auto() {
     i = 0;
     while(i != 1){
