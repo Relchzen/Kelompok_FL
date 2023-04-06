@@ -70,6 +70,12 @@ header {
   justify-content: center;
   padding: 50px;
 }
+#characterpet img {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
 
 @media (max-width: 768px) {
   .shop-toggle {

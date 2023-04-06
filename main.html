@@ -34,10 +34,10 @@
         <div id="clicker">
             <div class="upgrade">
                 <div class="autoclicker">
-                    <button>Add</button>
+                    <button>Auto click</button>
                 </div>
                 <div class="multiplier">
-                    <button>Multiply</button>
+                    <button>Multiply x</button>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
             <span id="moneyCount">0</span>
         </div>
         <div id="characterpet">
-            <img src="asset/rimuru-pixelart.gif" alt="">
+            <img onclick="addMoney()" src="asset/rimuru-pixelart.gif" alt="">
         </div>
     </div>
     <div class="market">
@@ -67,6 +67,10 @@
                 <div id="upgrades">
                     <p>Upgrade</p>
                     <button>10 C</button>
+                </div>
+                <div id="upgrades">
+                    <p>restart</p>
+                    <button onclick="restart()">restart</button>
                 </div>
             </div>
         </div>
