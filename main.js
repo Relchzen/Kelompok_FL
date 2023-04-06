@@ -32,6 +32,7 @@ shopToggle.addEventListener("click", () => {
 
 money = 0;
 var moneyadd = 1;
+
 function addMoney() {
     var moneyCount = document.getElementById("moneyCount");
     var money = Number(moneyCount.getAttribute("money"));
@@ -62,3 +63,4 @@ function upgradepet(){
     }
     document.getElementById("moneyCount").innerHTML = money;
 }
+
