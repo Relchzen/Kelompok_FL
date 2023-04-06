@@ -74,7 +74,8 @@
 
     <script src="main.js"></script>
     <script>
-        document.getElementById("moneyCount").setAttribute("money", localStorage.getItem("money"));
+        var moneyCount = document.getElementById("moneyCount");
+        moneyCount.setAttribute("money", localStorage.getItem("money"));
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
 
