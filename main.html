@@ -28,28 +28,16 @@
             </ul>
         </nav>
     </header>
+        
+
     <div class="container">
         <div id="clicker">
             <div class="upgrade">
                 <div class="autoclicker">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <button onclick="upgradeClicker()">Add</button>
-                </div>
-                <div class="multiplier">
-                    <button onclick="upgradeMultiplier()">Multiply</button>
-=======
-                    <button>Auto click</button>
-                </div>
-                <div class="multiplier">
-                    <button>Multiply x</button>
->>>>>>> ce91a6a (...)
-=======
                     <button>Auto click <span id="0"></span> : 0</button>
                 </div>
                 <div class="multiplier">
                     <button>Multiply x<span id="multi">1</span></button>
->>>>>>> 2832880 (css all index main)
                 </div>
             </div>
         </div>
@@ -57,11 +45,7 @@
             <span id="moneyCount">0</span>
         </div>
         <div id="characterpet">
-<<<<<<< HEAD
-            <img src="asset/rimuru-pixelart.gif" onclick="addMoney()" alt="">
-=======
             <img onclick="addMoney()" src="asset/rimuru-pixelart.gif" alt="">
->>>>>>> ce91a6a (...)
         </div>
     </div>
     <div class="market">
@@ -93,13 +77,8 @@
 
     <script src="main.js"></script>
     <script>
-<<<<<<< HEAD
-        var counter = document.getElementById("moneyCount");
-        counter.setAttribute("money", localStorage.getItem("money"));
-=======
         var moneyCount = document.getElementById("moneyCount");
         moneyCount.setAttribute("money", localStorage.getItem("money"));
->>>>>>> 2832880 (css all index main)
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
     </script>
