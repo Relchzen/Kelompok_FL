@@ -1,216 +1,90 @@
-* {
+body {
+  overflow-x: hidden;
+  background-image: url("./asset/pixelBG.gif");
+  background-size: cover;
+}
+
+header {
+  font-size: 28px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar {
+  display: flex;
+  background: hsl(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(1rem);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  #navbar {
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  #navbar {
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
+  }
+}
+
+#navbar li {
+  list-style: none;
   padding: 0;
   margin: 0;
+}
+
+#navbar a {
   text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url(./asset/pixelBG.gif);
-  background-repeat: repeat-y;
-  background-size: 110%;
-  background-color: #403660;
-  color: #233251;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  align-items: center;
-}
-
-nav {
-  background: #0082e6;
-  height: 80px;
-  width: 100%;
-}
-
-label.logo {
   color: white;
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 100px;
-  font-weight: bold;
+  padding: 5px;
+  margin: 15px;
 }
 
-nav ul {
-  float: right;
-  margin-right: 20px;
+#navbar a:hover,
+#navbar a.active {
+  background-color: brown;
 }
 
-nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
-a.active,
-a:hover {
-  background: #1b9bff;
-  transition: 0.5s;
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-}
-
-@media (max-width: 952px) {
-  label.logo {
-    font-size: 30px;
-    padding-left: 50px;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 700px) {
-  .checkbtn {
-    display: block;
-  }
-
-  ul {
+@media (max-width: 768px) {
+  #navbar {
+    --gap: 2em;
     position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
+    z-index: 1000;
+    inset: 0 0 0 40%;
+    background: hsl(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
   }
 
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+  #navbar[data-visible="true"] {
+    transform: translateX(0%);
   }
 
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  a:hover,
-  a.active {
+  .mobile-nav-toggle {
+    position: absolute;
     background: none;
-    color: #0082e6;
+    z-index: 9999;
+    width: 3rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 3rem;
+    right: 3rem;
   }
-
-  #check:checked ~ ul {
-    left: 0;
-  }
-}
-
-.container {
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  height: 650px;
-  /* display: flex;
-    justify-content: space-around; */
-  backdrop-filter: blur(4px);
-  border: 3px solid black;
-  border-radius: 12px;
-}
-
-#judul {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-#buy {
-  display: flex;
-  justify-content: space-around;
-}
-
-#money {
-  margin-top: 10px;
-  width: 200px;
-  height: 100px;
-}
-
-#moneyCount {
-  font-size: 50px;
-}
-
-#upgrade {
-  width: 200px;
-  height: 500px;
-  /* border: 3px solid green; */
-}
-
-#pet {
-  width: 100%;
-  text-align: center;
-}
-
-#pet img {
-  width: 400px;
-  margin-top: 20px;
-  /* background-color: yellow; */
-}
-
-#pet button {
-  width: 40px;
-  height: 40px;
-}
-
-#clicker {
-  margin-top: 10px;
-  width: 200px;
-  height: 600px;
-}
-
-#up {
-  align-items: center;
-  text-align: center;
-  margin-top: -50px;
-}
-
-#up img {
-  width: 180px;
-  margin-bottom: -70px;
-}
-
-#up p {
-  font-size: 32px;
-}
-
-#up button {
-  background-color: rgba(249, 249, 249, 0.398);
-  border-radius: 12px;
-  width: 70px;
-}
-
-#clicker {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 200px;
-}
-#clicker div button {
-  margin-top: 40px;
-  width: 180px;
-  height: 180px;
-  background-color: rgba(249, 249, 249, 0.398);
-  border-radius: 50%;
 }
