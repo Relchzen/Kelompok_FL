@@ -87,10 +87,10 @@ a.active, a:hover{
     width: auto;
     margin-left: 30px;
     margin-right: 20px;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; */
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* display: flex;
+    justify-content: flex-start; */
     margin-top: 10px;
 }
 
@@ -101,11 +101,36 @@ a.active, a:hover{
     margin-right: 30px;
 }
 
-img{
+#data:hover{
+    height: 380px;
+    width: 220px;
+    background-color: #0082e6;
+    color: #fff;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    transition: all .1s;
+    border-radius: 10px;
+    
+}
 
+img{
+    border-radius: 5px 5px 0 0;
     width: 200px;
     height: 200px;
 }
+
+img:hover{
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
 
 h4{
     margin: 10px;
