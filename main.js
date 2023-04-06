@@ -15,6 +15,22 @@ navToggle.addEventListener("click", () => {
     }
 })
 
+const shop = document.querySelector("#shop");
+const shopToggle = document.querySelector(".shop-toggle");
+
+shopToggle.addEventListener("click", () => {
+    const visibility = shop.getAttribute("data-visible");
+
+    if(visibility === "false") {
+        shop.setAttribute("data-visible", "true");
+        shopToggle.setAttribute("aria-expanded", "false");
+    } else if (visibility === "true") {
+        shop.setAttribute("data-visible", "false");
+        shopToggle.setAttribute("aria-expanded", "false");
+    }
+})
+
+
 function addMoney() {
     var moneyCount = document.getElementById("moneyCount");
     var money = Number(moneyCount.getAttribute("money"));
