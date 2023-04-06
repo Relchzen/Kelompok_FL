@@ -9,13 +9,13 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/71ca66d8b8.js" crossorigin="anonymous"></script>
 
-    <!-- <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio> -->
+    <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio>
     <title>Pat Your Pet</title>
 </head>
 
 <body>
     <header>
-        <a href="main.html" class="logo"><img src="./asset/fixNobg.png" alt=""></a>
+        <a href="main.html" class="logo"><img src="./asset/fixNobg.png" alt=""></a><p id="titletext">Pet Your Pet</p>
         <button class="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><i class="fa-solid fa-bars fa-xl" style="color: #f2f2f2;"></i></button>
         <nav>
             <ul id="navbar" data-visible="false">
@@ -34,8 +34,7 @@
         <div id="clicker">
             <div class="upgrade">
                 <div class="autoclicker">
-
-                    <button>Auto click <span id="0"></span> : 0</button>
+                    <button id="autoclickbtn" onclick="upgradeClicker()">Auto click : <span id="awokawok"></span>0</button>
                 </div>
                 <div class="multiplier">
                     <button>Multiply x<span id="multi">1</span></button>
@@ -46,7 +45,7 @@
             <span id="moneyCount">0</span>
         </div>
         <div id="characterpet">
-            <img src="asset/rimuru-pixelart.gif" onclick="addMoney()" alt="">
+            <img onclick="addMoney()" src="asset/rimuru-pixelart.gif" alt="">
         </div>
     </div>
     <div class="market">
@@ -58,17 +57,19 @@
             <p id="shoptext">SHOP</p>
             <div>
                 <div id="upgrades">
-                    <p>Upgrade</p>
-                    <button>10 C</button>
+                    <p>Upgrade Autoclick</p>
+                    <p>buy autoclick = NOOB</p>
+                    <button onclick="upgradeauto()"><span id="autobuy">500</span></button>
                 </div>
                 <div id="upgrades">
-                    <p>Upgrade</p>
-                    <button>10 C</button>
+                    <p>Upgrade Multiplier</p>
+                    <p>upgrade the multplier = EZ mode</p>
+                    <button onclick="upgrademulti()"><span id="multibuy">500</span></button>
                 </div>
                 <div id="upgrades">
                     <p>Upgrade Pet</p>
                     <p>give your pet a treat so they wont get bored</p>
-                    <button><span id="petbuy">1000</span></button>
+                    <button onclick="upgradepet()"><span id="petbuy">1000</span></button>
                 </div>
             </div>
         </div>
@@ -76,11 +77,10 @@
 
     <script src="main.js"></script>
     <script>
-        var counter = document.getElementById("moneyCount");
-        counter.setAttribute("money", localStorage.getItem("money"));
+        var moneyCount = document.getElementById("moneyCount");
+        moneyCount.setAttribute("money", localStorage.getItem("money"));
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
-        
     </script>
 </body>
 
