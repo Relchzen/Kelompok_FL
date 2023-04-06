@@ -66,8 +66,9 @@
                     <button>10 C</button>
                 </div>
                 <div id="upgrades">
-                    <p>Upgrade</p>
-                    <button>10 C</button>
+                    <p>Upgrade Pet</p>
+                    <p>give your pet a treat so they wont get bored</p>
+                    <button><span id="petbuy">1000</span></button>
                 </div>
             </div>
         </div>
@@ -75,12 +76,10 @@
 
     <script src="main.js"></script>
     <script>
-
-        var moneyCount = document.getElementById("moneyCount");
-        moneyCount.setAttribute("money", localStorage.getItem("money"));
+        var counter = document.getElementById("moneyCount");
+        counter.setAttribute("money", localStorage.getItem("money"));
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
-
         
     </script>
 </body>
