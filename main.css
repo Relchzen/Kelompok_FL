@@ -28,6 +28,8 @@ header {
   display: grid;
   background-image: url(./asset/pixelBG4.gif);
   background-repeat: repeat-y;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
   background-size: 100%;
 }
 
@@ -207,4 +209,18 @@ button:hover {
 .logo img {
   width: 80px;
   margin-left: 20px;
+}
+
+.autoclicker button {
+  margin-right: 10px;
+  width: 100px;
+}
+.multiplier button {
+  margin-left: 10px;
+  width: 100px;
+}
+
+#titletext {
+  margin-right: auto;
+  color: white;
 }

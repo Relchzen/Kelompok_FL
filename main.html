@@ -28,14 +28,17 @@
             </ul>
         </nav>
     </header>
+        
+
     <div class="container">
         <div id="clicker">
             <div class="upgrade">
                 <div class="autoclicker">
-                    <button onclick="upgradeClicker()">Add</button>
+
+                    <button>Auto click <span id="0"></span> : 0</button>
                 </div>
                 <div class="multiplier">
-                    <button onclick="upgradeMultiplier()">Multiply</button>
+                    <button>Multiply x<span id="multi">1</span></button>
                 </div>
             </div>
         </div>
@@ -72,8 +75,9 @@
 
     <script src="main.js"></script>
     <script>
-        var counter = document.getElementById("moneyCount");
-        counter.setAttribute("money", localStorage.getItem("money"));
+
+        var moneyCount = document.getElementById("moneyCount");
+        moneyCount.setAttribute("money", localStorage.getItem("money"));
         money = document.getElementById("moneyCount").getAttribute("money");
         document.getElementById("moneyCount").innerHTML = money;
 
