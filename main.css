@@ -24,7 +24,7 @@ header {
 }
 
 .container {
-  margin-top: 100px;
+  margin: 100px auto 0 auto;
   display: grid;
   background-color: cadetblue;
 }
@@ -32,6 +32,8 @@ header {
 .shop-toggle {
   z-index: 9000;
   position: fixed;
+  top: 110px;
+  left: 4rem;
   width: 3rem;
   aspect-ratio: 1;
   background: none;
@@ -65,11 +67,18 @@ header {
 #characterpet {
   display: flex;
   justify-content: center;
+  padding: 50px;
 }
 
 @media (max-width: 768px) {
+  .shop-toggle {
+    display: none;
+  }
   #shop {
-    inset: 0 40% 0 0;
+    margin-top: 10px;
+    height: 30%;
+    position: relative;
+    transform: translate(0%);
   }
 }
 
