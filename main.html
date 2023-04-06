@@ -6,69 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/71ca66d8b8.js" crossorigin="anonymous"></script>
 
-    <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio>
-    <title>Main Game</title>
+    <!-- <audio autoplay="1" loop="true" src="./backsound/Welcome-horizon.m4a"></audio> -->
+    <title>Pat Your Pet</title>
 </head>
 
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">Pat Your Pet</label>
-        <ul>
-            <li><a class="active">Main Game</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
+    <header>
+        <a href="main.html" class="logo"><img src="./asset/fixNobg.png" alt=""></a>
+        <button class="mobile-nav-toggle" aria-controls="navbar" aria-expanded="false"><i class="fa-solid fa-bars fa-xl" style="color: #f2f2f2;"></i></button>
+        <nav>
+            <ul id="navbar" data-visible="false">
+                <li class="active">
+                    <a href="main.html">Play</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <div>
-            <div id="money">
-                <span id="moneyCount"></span>
-            </div>
-            <div id="upgrade">
-                <div id="up">
-                    <img src="./asset/shoot.webp" alt="">
-                    <p>upgrade power</p>
-                    <button><span>10 C</span></button>
-                </div>
-                <div id="up">
-                    <img src="./asset/shoot.webp" alt="">
-                    <p>upgrade power</p>
-                    <button><span>10 C</span></button>
-                </div>
-                <div id="up">
-                    <img src="./asset/shoot.webp" alt="">
-                    <p>upgrade power</p>
-                    <button><span>10 C</span></button>
-                </div>
-                <div id="up">
-                    <img src="./asset/shoot.webp" alt="">
-                    <p>upgrade power</p>
-                    <button><span>10 C</span></button>
-                </div>
-            </div>
-        </div>
-        <div id="pet">
-            <img src="./asset/rimuru-pixelart.gif" onclick="auto()" alt="">
-        </div>
         <div id="clicker">
-            <div>
-                <button id="autoClick" onclick="auto()">Autoclick</button>
-            </div>
-            <div>
-                <button id="multi">Multiplier</button>
+            <div class="upgrade">
+                <div class="autoclicker">
+                    <button onclick="upgradeClicker()">Add</button>
+                </div>
+                <div class="multiplier">
+                    <button onclick="upgradeMultiplier()">Multiply</button>
+                </div>
             </div>
         </div>
-    <div class="content">
-        <div id="money"></div>
-        <div id="upgrade"></div>
+        <div id="duitid">
+            <span id="moneyCount">0</span>
+        </div>
+        <div id="characterpet">
+            <img src="asset/rimuru-pixelart.gif" onclick="addMoney()" alt="">
+        </div>
+    </div>
+    <div class="market">
+        <button class="shop-toggle" aria-controls="shop" aria-expanded="false"><i class="fa-solid fa-store fa-2xl" style="color: #ffffff;"></i></button>
+        <div id="counter">
+
+        </div>
+        <div id="shop" data-visible="false">
+            <p id="shoptext">SHOP</p>
+            <div>
+                <div id="upgrades">
+                    <p>Upgrade</p>
+                    <button>10 C</button>
+                </div>
+                <div id="upgrades">
+                    <p>Upgrade</p>
+                    <button>10 C</button>
+                </div>
+                <div id="upgrades">
+                    <p>Upgrade</p>
+                    <button>10 C</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>
+    <script>
+        var counter = document.getElementById("moneyCount");
+        counter.setAttribute("money", localStorage.getItem("money"));
+        money = document.getElementById("moneyCount").getAttribute("money");
+        document.getElementById("moneyCount").innerHTML = money;
+
+        
+    </script>
 </body>
 
 </html>
