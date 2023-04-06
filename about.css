@@ -73,14 +73,12 @@ a:hover {
   margin-bottom: 50px;
 }
 
-.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+#about {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 #profil {
@@ -127,12 +125,15 @@ img:hover {
   height: 200px;
 }
 
-#container{
-    width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+h4 {
+  margin: 10px;
+  font-size: 11px;
+}
+p {
+  margin-left: 10px;
+  margin-top: none;
+  font-size: 11px;
+}
 
 @media (max-width: 952px) {
   label.logo {
@@ -146,44 +147,49 @@ img:hover {
   #about {
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 30px;
-    margin-right: 20px;
     margin-top: 20px;
-    font-size: 30px;
-    
-}
+    font-size: 25px;
+  }
 
-
-#profil{
-    width: auto;
+  #profil {
     margin-left: 30px;
     margin-right: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* display: flex;
-    justify-content: flex-start; */
-    margin-top: 10px;
-}
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-#data{
+  #data {
     height: 360px;
     width: 200px;
-    background-color: rgba(240, 248, 255, 0.496);
-    border-radius: 10px;
+    background-color: gainsboro;
     margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
 }
+@media (max-width: 700px) {
+  #profil {
+    margin-left: 30px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #about {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 25px;
+  }
 
-#data:hover{
-    height: 380px;
-    width: 220px;
-    background-color: #343e47;
-    color: #fff;
+  #data {
+    height: 360px;
+    width: 200px;
+    background-color: gainsboro;
     margin-right: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-    transition: all .1s;
-    border-radius: 10px;
-    
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -228,174 +234,17 @@ img:hover {
     margin-bottom: 50px;
   }
 
-img:hover{
-    border-radius: 5px;
-    width: 200px;
-    height: 200px;
-}
-
-
-
-
-
-
-h4{
-    margin: 10px;
-    font-size: 11px;
-}
-p{
-   margin-left: 10px;
-   margin-top: none; 
-   font-size: 11px;
-}
-
-
-
-
-
-
-@media(max-width:952px){
-    label.logo {
-        color: white;
-        font-size: 30px;
-        line-height: 80px;
-        margin-left: 50px;
-        margin-right: 20px;
-        font-weight: bold;
-    }
-    #about{
-        font-family: Arial, Helvetica, sans-serif;
-        margin-left: 30px;
-        margin-top: 20px;
-        font-size: 25px;
-        
-    }
-    
-    
-    #profil{
-        margin-left: 30px;
-        margin-right: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    
-    }
-
-    #data{
-        height: 360px;
-        width: 200px;
-        background-color: gainsboro;
-        margin-right: 30px;
-        margin-bottom: 20px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-
-   
-}
-@media(max-width:700px){
-    
-    #profil{
-        margin-left: 30px;
-        margin-right: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-    
-    }
-    #about{
-        font-family: Arial, Helvetica, sans-serif;
-        margin-left: 30px;
-        margin-top: 20px;
-        font-size: 25px;
-        
-    }
-
-    #data{
-        height: 360px;
-        width: 200px;
-        background-color: gainsboro;
-        margin-right: 30px;
-        margin-bottom: 20px;
-    }
-    
-}
-
-@media (max-width:480px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    a:hover,a.active{
-        background: none;
-        color: #0082e6;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-
-    #container{
-        /* width: 100%; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 20px;
-        margin-bottom: 50px;
-    
-    }
-
-    #profil{
-        margin-left: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    
-    }
-    
-    #about{
-        display: flex;
-        justify-content: space-around;
-        margin-left: 30px;
-        margin-top: 20px;
-        font-size: 30px;
-    }
-
-    #data{
-        height: 360px;
-        width: 200px;
-        background-color: gainsboro;
-        margin-bottom: 20px;
-        margin-right: 0;
-    }
-}
-
-#referensi {
+  #profil {
     margin-left: 30px;
-    margin-right: 20px;
-    margin-top: 50px;
-}
-#referensi label{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #about {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 30px;
     margin-top: 20px;
     font-size: 30px;
   }
@@ -420,4 +269,3 @@ p{
   margin-top: 20px;
   font-size: 30px;
 }
-
