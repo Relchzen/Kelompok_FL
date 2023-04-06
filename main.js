@@ -31,16 +31,17 @@ shopToggle.addEventListener("click", () => {
 })
 
 money = 0;
+var moneyadd = 1;
+
 function addMoney() {
     var moneyCount = document.getElementById("moneyCount");
     var money = Number(moneyCount.getAttribute("money"));
     localStorage.removeItem(money);
     
-    money += 1;
+    money += moneyadd;
     moneyCount.setAttribute("money", money);
     localStorage.setItem("money", money);
     document.getElementById("moneyCount").innerHTML = money;
-
 }
 
 function auto() {
@@ -50,3 +51,16 @@ function auto() {
         // sleep(1);
     }
 }
+
+function upgradepet(){
+    var petup = document.getElementById("petbuy");
+    petup = 1000;
+    if (money >= petup){
+        moneyadd += 1;
+        money -= 1000;
+    }else{
+        window.alert("mana duitnya")
+    }
+    document.getElementById("moneyCount").innerHTML = money;
+}
+
