@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   /* background-image: url("./asset/pixelBG.gif"); */
-  background-color: darkcyan;
+  background-image: url(./asset/pemandangan.jpg);
   background-size: cover;
 }
 
@@ -15,6 +15,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(43, 48, 52, 0.667);
+  height: 95px;
 }
 
 #navbar {
@@ -27,8 +29,9 @@ header {
   margin: 100px auto 0 auto;
   display: grid;
   background-image: url(./asset/pixelBG4.gif);
-  background-repeat:no-repeat;
+  background-repeat:repeat-y;
   background-size: 100%;
+  height: 650px;
 }
 
 .shop-toggle {
@@ -70,6 +73,12 @@ header {
   justify-content: center;
   padding: 50px;
 }
+#characterpet img {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
 
 @media (max-width: 768px) {
   .shop-toggle {
@@ -85,8 +94,8 @@ header {
     margin: 100px auto 0 auto;
     display: grid;
     background-image: url(./asset/pixelBG4.gif);
-    background-repeat: no-repeat;
-    background-size: 200%;
+    background-repeat: repeat-y;
+    background-size: 100%;
   }
   #characterpet {
     width: 300px;
@@ -140,7 +149,7 @@ header {
 
 #navbar li:hover,
 #navbar li.active {
-  background-color: brown;
+  background-color: #343e47;
 }
 
 @media (max-width: 768px) {
@@ -149,7 +158,7 @@ header {
     position: fixed;
     z-index: 1000;
     inset: 0 0 0 40%;
-    background: hsl(0, 0%, 100%, 0.1);
+    background-color: rgba(43, 48, 52, 0.667);
     backdrop-filter: blur(1rem);
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
@@ -208,4 +217,17 @@ button:hover{
 .logo img{
   width: 80px;
   margin-left: 20px;
+}
+
+.autoclicker button{
+  margin-right: 10px;
+  width: 100px;
+}
+.multiplier button{
+  margin-left: 10px;
+  width: 100px;
+}
+#titletext{
+  margin-right: auto;
+  color: white;
 }

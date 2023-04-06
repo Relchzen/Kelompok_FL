@@ -30,10 +30,11 @@ shopToggle.addEventListener("click", () => {
     }
 })
 
-
+money = 0;
 function addMoney() {
     var moneyCount = document.getElementById("moneyCount");
     var money = Number(moneyCount.getAttribute("money"));
+    localStorage.removeItem(money);
     
     money += 1;
     moneyCount.setAttribute("money", money);
