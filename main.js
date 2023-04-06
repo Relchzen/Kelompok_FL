@@ -30,6 +30,7 @@ shopToggle.addEventListener("click", () => {
     }
 })
 
+<<<<<<< HEAD
 const moneyCount = document.getElementById("moneyCount");
 const clicker = document.getElementById("clicker");
 const multiplier = document.getElementById("multiplier");
@@ -37,8 +38,12 @@ const multiplier = document.getElementById("multiplier");
 const clickerCount = clicker.getAttribute("clicker");
 const multiplierCount = multiplier.getAttribute("multiplier");
 
+=======
+money = 0;
+>>>>>>> 2832880 (css all index main)
 function addMoney() {
     var money = Number(moneyCount.getAttribute("money"));
+    localStorage.removeItem(money);
     
     money = money + 1;
     console.log(money);
@@ -48,6 +53,7 @@ function addMoney() {
 
 }
 
+<<<<<<< HEAD
 function upgradeClicker() {
     
 }
@@ -55,3 +61,12 @@ function upgradeClicker() {
 function upgradeMultiplier() {
     
 }
+=======
+function auto() {
+    i = 0;
+    while(i != 1){
+        addMoney();
+        // sleep(1);
+    }
+}
+>>>>>>> 2832880 (css all index main)
