@@ -50,3 +50,31 @@ function upgradeClicker() {
 function upgradeMultiplier() {
     
 }
+
+var money = 0;
+var cabang = 0;
+var cabangCost = 100;
+function bukaCabang() {
+    cabang++;
+    document.getElementById("income-multipliers").innerHTML = cabang;
+}
+// Fungsi untuk membeli cabang
+function beliCabang(cost) {
+    if (money >= cost) {
+        money -= cost;
+        document.getElementById("money").innerHTML = money;
+        bukaCabang();
+        cabangCost *= 1.3; // quad the cabang cost after adding an cabang
+        document.getElementById("income-multiplier-cost").innerHTML = cabangCost; // update the cost display
+        moneyValue= 2*moneyValue;
+    } else {
+        document.getElementById("warning").style.display = "block";
+    }
+}
+
+// Event listener untuk membeli income multiplier
+document.getElementById("income-mulitpier").addEventListener("click", function() {
+    beliCabang(cabangCost);
+});
+// Update cost upgrade dan auto-click
+document.getElementById("income-multiplier-cost").innerHTML = cabangCost;
